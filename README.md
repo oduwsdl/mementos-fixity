@@ -2,17 +2,6 @@
 
 This data set is for the longitudinal study that is the basis of [Mohamed Aturban](https://twitter.com/maturban1)'s PhD disssertation, "[A Framework for Verifying the Fixity of Archived Web Resources](https://ws-dl.blogspot.com/2020/09/2020-09-28-phd-is-very-long-tunnel-with.html)".
 
-To cite this data set, please cite "[Collecting 16K archived web pages from 17 public web archives](https://arxiv.org/abs/1905.03836)":
-
-```
-@techreport{aturban:16kpages,
-        title = {Collecting {16K} archived web pages from 17 public web archives},
-        author = {Mohamed Aturban and Michael L. Nelson and Michele C. Weigle},
-        year = {2019},
-        number = {arXiv:1905.03836},
-}
-```
-
 <pre>
     Archive              URI-Ms 1996  97   98   99 2000   01   02   03   04   05   06   07   08    09    10    11    12    13    14    15    16   17 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -38,4 +27,15 @@ Total                           137  121  110  109  114  197  201  202  385  371
 
 * The number of mementos per archive and how they are distributed through time.
  
-</pre></div>
+</pre>
+
+To cite this data set, please cite "[Collecting 16K archived web pages from 17 public web archives](https://arxiv.org/abs/1905.03836)":
+
+```
+@techreport{aturban:16kpages,
+        title = {Collecting {16K} archived web pages from 17 public web archives},
+        author = {Mohamed Aturban and Michael L. Nelson and Michele C. Weigle},
+        year = {2019},
+        number = {arXiv:1905.03836},
+}
+```
