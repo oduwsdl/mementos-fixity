@@ -29,9 +29,9 @@ The unique resources (or their hashes) are represented by points in the figures 
 
 We use color to distinguish between the hashing techniques:
 
-* [full](https://github.com/oduwsdl/mementos-fixity/tree/master/hashing_techniques/full_hashing) (<span style="color:red">red</span>): Each point in the figure represents whether the resource's hash value (calculated by Hash(URI-M + Status + Entity + Headers)) has been seen (color=red) or not (color=gray)
-* [URI-M based](https://github.com/oduwsdl/mementos-fixity/tree/master/hashing_techniques/urim_hashing) (<span style="color:blue">blue</span>): Each point in the figure represents whether the URI-M of the resource is requested (color=blue) or not (color=gray)
-* [entity based](https://github.com/oduwsdl/mementos-fixity/tree/master/hashing_techniques/entity_hashing) (<span style="color:green">green</span>): Each point in the figure represents whether the entity of the resource with "200-OK" has been seen (color=green) or not (color=gray)
+* [full](https://github.com/oduwsdl/mementos-fixity/tree/master/hashing_techniques/full_hashing) (red): Each point in the figure represents whether the resource's hash value (calculated by Hash(URI-M + Status + Entity + Headers)) has been seen (color=red) or not (color=gray)
+* [URI-M based](https://github.com/oduwsdl/mementos-fixity/tree/master/hashing_techniques/urim_hashing) (blue): Each point in the figure represents whether the URI-M of the resource is requested (color=blue) or not (color=gray)
+* [entity based](https://github.com/oduwsdl/mementos-fixity/tree/master/hashing_techniques/entity_hashing) (green): Each point in the figure represents whether the entity of the resource with "200-OK" has been seen (color=green) or not (color=gray)
 
 The examples below are for mementos from the Internet Archive (archive.org).
 
@@ -42,6 +42,11 @@ The examples below are for mementos from the Internet Archive (archive.org).
 <td> <a href="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/urim_hashing/all_resources_IA_urim.gif"><img src="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/urim_hashing/all_resources_IA_urim.gif?raw=true" width="250"/></a> </td>
 <td>
 <a href="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/entity_hashing/all_resources_IA_entity.gif"><img src="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/entity_hashing/all_resources_IA_entity.gif?raw=true" width="250"/></a></td>
+</tr>
+<tr>
+<td>full</td>
+<td>entity based</td>
+<td>URI-M based</td>
 </tr>
 </table>
 
@@ -56,3 +61,32 @@ We have several observations from the three figures above. These apply to most o
 * The colored area (points with blue, red, or green color) under the baseline download line in all animated GIFs are denser than areas above the baseline download line. This indicates that resources requested in Download 1 have a higher chance of getting requested in the future than new resources requested in downloads 2-39.
 
 * The animated GIFs demonstrate that the entity hashing technique produces fewer new hash values than the other techniques.
+
+## File Naming Scheme
+
+We have divided the images into three folders based on the hashing technique used:
+
+* [`entity_hashing`](https://github.com/oduwsdl/mementos-fixity/tree/master/hashing_techniques/entity_hashing)
+* [`full_hashing`](https://github.com/oduwsdl/mementos-fixity/tree/master/hashing_techniques/full_hashing)
+* [`urim_hashing`](https://github.com/oduwsdl/mementos-fixity/tree/master/hashing_techniques/urim_hashing)
+
+Each folder contains an animated GIF (showing hashes generated in each download over time, filenames begin with `all_resources`) and a bar chart (showing the number of new hashes generated in each download, filenames begin with `new_resources`) for each archive.
+
+The archives are indicated with the following abbreviations in the filename:
+
+* `ARQUIVO` - arquivo.pt
+* `BIBALEX` - archive.bibalex.org
+* `CA` - collectionscanada.gc.ca
+* `DIGAR` - digar.ee
+* `EU` - europarchive.org
+* `IA` - archive.org (Internet Archive)
+* `IS` - archive.is
+* `IT` - archive-it.org
+* `LOC` - webarchive.loc.gov (Library of Congress)
+* `NATIONAL` - nationalarchives.gov.uk
+* `PERMA` - perma.cc
+* `STANFORD` - swap.stanford.edu
+* `VEFSAFN` - vefsafn.is
+* `WC` - webcitation.org
+* `WEBHARVEST` - webharvest.gov
+* `WEBUK` - webarchive.org.uk
