@@ -33,6 +33,8 @@ We use color to distinguish between the hashing techniques:
 
 The unique resources (or their hashes) are represented by points/dots in the figures and stacked in rows, so each point represents one resource. The location of a resource does not change regardless in all download, but the number of unique resources increases over time (i.e., new resources are requested in each download).  The only special meaning to the position (x, y) of a resource is that resources appear on the bottom of the figures (e.g., download 1) are requested before resources appear at the top (e.g., download 39).
 
+<img src="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/urim_hashing/Maturban_all_resources_over_time_IA_urim_2.gif?raw=true" width="200"/>
+
 ![alt text](https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/urim_hashing/Maturban_all_resources_over_time_IA_urim_2.gif?raw=true "Resources (URI-Ms) requested in downloads 1 to 39 from the Internet Archive. Blue = URI-M is requested, Gray = URI-M is not requested. Total URI-Ms requested by download 39 is 81,035.")
 
 ![alt text](https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/full_hashing/Maturban_all_resources_over_time_IA_all_2.gif?raw=true "Each point (or resource) = hash(HTTP response headers, HTTP entity body, HTTP status code, URI-M).")
