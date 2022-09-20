@@ -1,6 +1,20 @@
 # mementos-fixity
 
-This data set is for the longitudinal study that is the basis of [Mohamed Aturban](https://twitter.com/maturban1)'s PhD disssertation, "[A Framework for Verifying the Fixity of Archived Web Resources](https://ws-dl.blogspot.com/2020/09/2020-09-28-phd-is-very-long-tunnel-with.html)".
+This data set is from the longitudinal study that is the basis of [Mohamed Aturban](https://twitter.com/maturban1)'s PhD disssertation, "[A Framework for Verifying the Fixity of Archived Web Resources](https://ws-dl.blogspot.com/2020/09/2020-09-28-phd-is-very-long-tunnel-with.html)" (Old Dominion University, August 2020).  
+
+Terms:
+
+* URI-R - Uniform Resource Identifier (URI) of the original resource (original webpage)
+* URI-M - URI of an archived webpage, or memento, at a given datetime
+* TimeMap - provides a list of mementos (URI-Ms) for a given URI-R
+
+[`final_urims.txt`](https://github.com/oduwsdl/mementos-fixity/blob/master/final_urims.txt) is the list of URI-Ms for 16,627 archived web pages, or mementos, of 3,698 unique live webpages from 17 public web archives.
+
+Python scripts that were used in compiling the data set are included in the repo.
+
+The subdirectories, hashing_techniques and memento_migration, contain data from subsequent analysis of mementos in this data set.
+
+The table below shows the number of mementos collected per archive and how they are distributed through time.  The same data is available in [`urims-per-year.csv`](https://github.com/oduwsdl/mementos-fixity/blob/master/urims-per-year.csv).
 
 <pre>
     Archive              URI-Ms 1996  97   98   99 2000   01   02   03   04   05   06   07   08    09    10    11    12    13    14    15    16   17 
@@ -24,9 +38,6 @@ archive.bibalex.org        199    -    -    1    -    -    -    -    -    -    -
 perma-archives.org         182    -    -    -    -    -    -    -    -    -    -    -    -    -     -     -     -     -     -    23    53    53   53
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 Total                           137  121  110  109  114  197  201  202  385  371  824  677  904 1,011 1,215 1,442 1,550 1,547 1,635 1,528 1,421  926
-
-* The number of mementos per archive and how they are distributed through time.
- 
 </pre>
 
 To cite this data set, please cite "[Collecting 16K archived web pages from 17 public web archives](https://arxiv.org/abs/1905.03836)":
