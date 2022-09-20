@@ -25,27 +25,31 @@ The entity-based hashing technique considers only the HTTP entity bodies of reso
 
 We compare the three techniques by generating animated GIFs files for each of the 17 public web archives to show the number of resources requested each time we download the set of mementos from the archive. The figures show how the pool of observed resources has increased over time and whether a current download requests previously seen resources.
 
+The unique resources (or their hashes) are represented by points in the figures and stacked in rows, so each point represents one resource. The location of a resource in the figure does not change, but the number of unique resources increases over time (i.e., new resources are requested in each download).  The only special meaning to the position (x, y) of a resource is that resources appear on the bottom of the figures (e.g., download 1) are requested before resources appear at the top (e.g., download 39).
+
 We use color to distinguish between the hashing techniques:
 
 * full (red): Each point in the figure represents whether the resource's hash value (calculated by Hash(URI-M + Status + Entity + Headers)) has been seen (color=red) or not (color=gray)
 * URI-M based (blue): Each point in the figure represents whether the URI-M of the resource is requested (color=blue) or not (color=gray)
 * entity based (green): Each point in the figure represents whether the entity of the resource with "200-OK" has been seen (color=green) or not (color=gray)
 
-The unique resources (or their hashes) are represented by points/dots in the figures and stacked in rows, so each point represents one resource. The location of a resource does not change regardless in all download, but the number of unique resources increases over time (i.e., new resources are requested in each download).  The only special meaning to the position (x, y) of a resource is that resources appear on the bottom of the figures (e.g., download 1) are requested before resources appear at the top (e.g., download 39).
+The examples below are for mementos from the Internet Archive.
 
-<img src="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/urim_hashing/Maturban_all_resources_over_time_IA_urim_2.gif?raw=true" width="200"/>
+<table>
+<tr>
+<td><a href="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/full_hashing/Maturban_all_resources_over_time_IA_all_2.gif"><img src="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/full_hashing/Maturban_all_resources_over_time_IA_all_2.gif?raw=true" width="250"/></a>
+</td>
+<td> <a href="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/urim_hashing/Maturban_all_resources_over_time_IA_urim_2.gif"><img src="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/urim_hashing/Maturban_all_resources_over_time_IA_urim_2.gif?raw=true" width="250"/></a> </td>
+<td>
+<a href="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/entity_hashing/Maturban_all_resources_over_time_IA_entity_2.gif"><img src="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/entity_hashing/Maturban_all_resources_over_time_IA_entity_2.gif?raw=true" width="250"/></a></td>
+</tr>
+</table>
 
-![alt text](https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/urim_hashing/Maturban_all_resources_over_time_IA_urim_2.gif?raw=true "Resources (URI-Ms) requested in downloads 1 to 39 from the Internet Archive. Blue = URI-M is requested, Gray = URI-M is not requested. Total URI-Ms requested by download 39 is 81,035.")
+We have several observations from the three figures above. These apply to most of the animated GIFs available in this repository:
 
-![alt text](https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/full_hashing/Maturban_all_resources_over_time_IA_all_2.gif?raw=true "Each point (or resource) = hash(HTTP response headers, HTTP entity body, HTTP status code, URI-M).")
+* Ideally, the same number of resources should be requested in each download. However, our study indicates that new resources are requested on every download. The figure below shows the number of new resources requested on each download from the Internet Archive (archive.org).
 
-![alt text](https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/entity_hashing/Maturban_all_resources_over_time_IA_entity_2.gif?raw=true "Entities returned in the downloads 1 to 39 from the Internet Archive. Green = Entity is returned, Gray = Entity is not returned.")
-
-We have several observations from the three figures above and these should apply to most of the animated GIFs available in this repository:
-
-* Ideally, the same number of resources should be requested in each download. However, our study indicates that new resources are requested on every download. The figure below shows the number of new resources requested on each download from archive.org
-
-![alt text](https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/urim_hashing/Maturban_new_resources_per_download_ia_urim.png?raw=true "The number of new resources requested after each download from the Internet archive.")
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/urim_hashing/Maturban_new_resources_per_download_ia_urim.png"><img src="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/urim_hashing/Maturban_new_resources_per_download_ia_urim.png?raw=true" width="250"/></a>
 
 * The number of requested URI-Ms in Download 1 (baseline download) in the first figure above is only 40,500 compared to the total number of resources requested by Download 39, which is 81,035 URI-Ms. Download 1 requested only 50% of the total number of resources seen by Download 39.
 
