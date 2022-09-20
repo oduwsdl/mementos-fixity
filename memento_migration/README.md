@@ -28,9 +28,6 @@ BibTeX:
       booktitle = {Proceedings of the Theory and Practice of Digital Libraries Conference (TPDL)},
       year = {2021},
       month = sep,
-      arxiv = {https://arxiv.org/abs/2108.05939},
-      keyword = {award},
-      award = {Best Research Paper},
-      pubdate = {202109}
+      arxiv = {https://arxiv.org/abs/2108.05939}
 }
 ```
