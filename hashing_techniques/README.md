@@ -29,19 +29,19 @@ The unique resources (or their hashes) are represented by points in the figures 
 
 We use color to distinguish between the hashing techniques:
 
-* full (red): Each point in the figure represents whether the resource's hash value (calculated by Hash(URI-M + Status + Entity + Headers)) has been seen (color=red) or not (color=gray)
-* URI-M based (blue): Each point in the figure represents whether the URI-M of the resource is requested (color=blue) or not (color=gray)
-* entity based (green): Each point in the figure represents whether the entity of the resource with "200-OK" has been seen (color=green) or not (color=gray)
+* [full](https://github.com/oduwsdl/mementos-fixity/tree/master/hashing_techniques/full_hashing) (<span style="color:red">red</span>): Each point in the figure represents whether the resource's hash value (calculated by Hash(URI-M + Status + Entity + Headers)) has been seen (color=red) or not (color=gray)
+* [URI-M based](https://github.com/oduwsdl/mementos-fixity/tree/master/hashing_techniques/urim_hashing) (<span style="color:blue">blue</span>): Each point in the figure represents whether the URI-M of the resource is requested (color=blue) or not (color=gray)
+* [entity based](https://github.com/oduwsdl/mementos-fixity/tree/master/hashing_techniques/entity_hashing) (<span style="color:green">green</span>): Each point in the figure represents whether the entity of the resource with "200-OK" has been seen (color=green) or not (color=gray)
 
-The examples below are for mementos from the Internet Archive.
+The examples below are for mementos from the Internet Archive (archive.org).
 
 <table>
 <tr>
-<td><a href="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/full_hashing/Maturban_all_resources_over_time_IA_all_2.gif"><img src="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/full_hashing/Maturban_all_resources_over_time_IA_all_2.gif?raw=true" width="250"/></a>
+<td><a href="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/full_hashing/all_resources_IA_full.gif"><img src="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/full_hashing/all_resources_IA_full.gif?raw=true" width="250"/></a>
 </td>
-<td> <a href="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/urim_hashing/Maturban_all_resources_over_time_IA_urim_2.gif"><img src="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/urim_hashing/Maturban_all_resources_over_time_IA_urim_2.gif?raw=true" width="250"/></a> </td>
+<td> <a href="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/urim_hashing/all_resources_IA_urim.gif"><img src="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/urim_hashing/all_resources_IA_urim.gif?raw=true" width="250"/></a> </td>
 <td>
-<a href="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/entity_hashing/Maturban_all_resources_over_time_IA_entity_2.gif"><img src="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/entity_hashing/Maturban_all_resources_over_time_IA_entity_2.gif?raw=true" width="250"/></a></td>
+<a href="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/entity_hashing/all_resources_IA_entity.gif"><img src="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/entity_hashing/all_resources_IA_entity.gif?raw=true" width="250"/></a></td>
 </tr>
 </table>
 
@@ -49,7 +49,7 @@ We have several observations from the three figures above. These apply to most o
 
 * Ideally, the same number of resources should be requested in each download. However, our study indicates that new resources are requested on every download. The figure below shows the number of new resources requested on each download from the Internet Archive (archive.org).
 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/urim_hashing/Maturban_new_resources_per_download_ia_urim.png"><img src="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/urim_hashing/Maturban_new_resources_per_download_ia_urim.png?raw=true" width="250"/></a>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/urim_hashing/new_resources_IA_urim.png"><img src="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/urim_hashing/new_resources_IA_urim.png?raw=true" width="300"/></a>
 
 * The number of requested URI-Ms in Download 1 (baseline download) in the first figure above is only 40,500 compared to the total number of resources requested by Download 39, which is 81,035 URI-Ms. Download 1 requested only 50% of the total number of resources seen by Download 39.
 
