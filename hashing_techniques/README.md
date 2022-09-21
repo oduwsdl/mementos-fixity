@@ -29,38 +29,53 @@ The unique resources (or their hashes) are represented by points in the figures 
 
 We use color to distinguish between the hashing techniques:
 
-* [full](https://github.com/oduwsdl/mementos-fixity/tree/master/hashing_techniques/full_hashing) (red): Each point in the figure represents whether the resource's hash value (calculated by Hash(URI-M + Status + Entity + Headers)) has been seen (color=red) or not (color=gray)
-* [URI-M based](https://github.com/oduwsdl/mementos-fixity/tree/master/hashing_techniques/urim_hashing) (blue): Each point in the figure represents whether the URI-M of the resource is requested (color=blue) or not (color=gray)
-* [entity based](https://github.com/oduwsdl/mementos-fixity/tree/master/hashing_techniques/entity_hashing) (green): Each point in the figure represents whether the entity of the resource with "200-OK" has been seen (color=green) or not (color=gray)
+* [full](full_hashing/) (red): Each point in the figure represents whether the resource's hash value (calculated by Hash(URI-M + Status + Entity + Headers)) has been seen (color=red) or not (color=gray)
+* [URI-M based](urim_hashing/) (blue): Each point in the figure represents whether the URI-M of the resource is requested (color=blue) or not (color=gray)
+* [entity based](entity_hashing/) (green): Each point in the figure represents whether the entity of the resource with "200-OK" has been seen (color=green) or not (color=gray)
 
 The examples below are for mementos from the Internet Archive (archive.org).
 
 <table>
 <tr>
-<td><a href="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/full_hashing/all_resources_IA_full.gif"><img src="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/full_hashing/all_resources_IA_full.gif?raw=true" width="250"/></a>
+<td><a href="full_hashing/all_resources_IA_full.gif"><img src="full_hashing/all_resources_IA_full.gif?raw=true" width="250"/></a>
 </td>
-<td> <a href="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/urim_hashing/all_resources_IA_urim.gif"><img src="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/urim_hashing/all_resources_IA_urim.gif?raw=true" width="250"/></a> </td>
+<td> <a href="urim_hashing/all_resources_IA_urim.gif"><img src="urim_hashing/all_resources_IA_urim.gif?raw=true" width="250"/></a> </td>
 <td>
-<a href="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/entity_hashing/all_resources_IA_entity.gif"><img src="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/entity_hashing/all_resources_IA_entity.gif?raw=true" width="250"/></a></td>
+<a href="entity_hashing/all_resources_IA_entity.gif"><img src="entity_hashing/all_resources_IA_entity.gif?raw=true" width="250"/></a></td>
 </tr>
 <tr>
 <td>full</td>
-<td>entity based</td>
 <td>URI-M based</td>
+<td>entity based</td>
 </tr>
 </table>
 
 We have several observations from the three figures above. These apply to most of the animated GIFs available in this repository:
 
-* Ideally, the same number of resources should be requested in each download. However, our study indicates that new resources are requested on every download. The figure below shows the number of new resources requested on each download from the Internet Archive (archive.org).
+* Ideally, the same number of resources should be requested in each download. However, our study indicates that new resources are requested on every download. The figures below show the number of new resources requested, or hashes calculated, on each download from the Internet Archive (archive.org) with the three hashing techniques.
 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/urim_hashing/new_resources_IA_urim.png"><img src="https://github.com/oduwsdl/mementos-fixity/blob/master/hashing_techniques/urim_hashing/new_resources_IA_urim.png?raw=true" width="300"/></a>
+<table>
+<tr>
+<td><a href="full_hashing/new_resources_IA_full.png"><img src="full_hashing/new_resources_IA_full.png?raw=true" width="250"/></a>
+</td>
+<td> <a href="urim_hashing/new_resources_IA_urim.png"><img src="urim_hashing/new_resources_IA_urim.png?raw=true" width="250"/></a> </td>
+<td>
+<a href="entity_hashing/new_resources_IA_entity.png"><img src="entity_hashing/new_resources_IA_entity.png?raw=true" width="250"/></a></td>
+</tr>
+<tr>
+<td>full</td>
+<td>URI-M based</td>
+<td>entity based</td>
+</tr>
+</table>
 
 * The number of requested URI-Ms in Download 1 (baseline download) in the first figure above is only 40,500 compared to the total number of resources requested by Download 39, which is 81,035 URI-Ms. Download 1 requested only 50% of the total number of resources seen by Download 39.
 
 * The colored area (points with blue, red, or green color) under the baseline download line in all animated GIFs are denser than areas above the baseline download line. This indicates that resources requested in Download 1 have a higher chance of getting requested in the future than new resources requested in downloads 2-39.
 
 * The animated GIFs demonstrate that the entity hashing technique produces fewer new hash values than the other techniques.
+
+*See [archive-table.md](archive-table.md) for links to the animated GIFs and bar charts for all archives.*
 
 ## File Naming Scheme
 
